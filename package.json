@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@craco/craco": "^5.9.0",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  },
+  "scripts":  {
+    "start": "craco start",
+    "build": "craco build",
+    "test" : "craco test",
+    "eject": "react-scripts eject"
+  }
+}
