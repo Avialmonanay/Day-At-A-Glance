@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Silkscreen&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: first baseline;
+    align-items: flex-start;
+    height: 100vh;
+    margin-right: 0;
+    background: url(https://images.unsplash.com/photo-1587141105209-2a7ee89bce02?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=887&q=80) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.card {
+    background: #000000;
+    color: white;
+    padding: 2em;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin: 1em;
+
+}
