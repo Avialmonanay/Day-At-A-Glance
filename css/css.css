@@ -1,0 +1,7 @@
+body {
+    background-image: url(https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?cs=srgb&dl=pexels-krivec-ales-547115.jpg&fm=jpg);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
