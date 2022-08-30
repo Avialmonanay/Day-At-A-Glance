@@ -96,15 +96,6 @@ h1 {
     font-size: 15px;
     font-weight: 500;
 }
-.checkbox {
-    background-color: white;
-    color: #ffffff;
-    border: solid black 1px;
-    cursor: pointer;
-    outline: none;
-    height: 100%;
-    width: 40px;
-    border-radius: 5px;
-}
+
    
 

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <span id="taskname">
                     ${parsedtasks[i]}
                 </span>
-                <input class="checkbox" type="checkbox"</input>
+                <input class="checkbox" type="checkbox"></input>
             </div>
         `;
     }
