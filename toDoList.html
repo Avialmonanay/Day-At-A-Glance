@@ -6,10 +6,25 @@
  <link rel="stylesheet" href="./toDoList.css">
 </head>
 <body>
+  <navbar><a href="index.html">Home</a></navbar>
   <div class="container">
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>OOPS...</h2>
+      </div>
+      <div class="modal-body">
+        <h2>Please Add Tasks to Continue</h2>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+    </div>
     <h1>To Do List</h1>
     <div id="newtask">
-        <input type="text" placeholder="Add Tasks">
+        <input type="text" id="textentry" placeholder="Add Tasks">
         <button id="push">Add</button>
     </div>
     <div id="tasks"></div>
