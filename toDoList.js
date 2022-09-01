@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     // initialize current tasks list if not already in localstorage
     dodo = localStorage.getItem('current_tasks')
