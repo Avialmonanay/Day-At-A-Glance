@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     // initialize current tasks list if not already in localstorage
     dodo = localStorage.getItem('current_tasks')
@@ -10,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // for every item in localstorage add it back to our tasks list on pageload
     for (var i = 0; i < parsedtasks.length; i++) {
         document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">
-                    ${parsedtasks[i]}
-                </span>
-                <input class="checkbox" type="checkbox"></input>
-            </div>
-        `;
+          <div class="task">
+              <span id="taskname">
+                  ${parsedtasks[i]}
+              </span>
+              <input class="checkbox" type="checkbox"></input>
+          </div>
+      `;
     }
     // Make sure that our new tasks can be deleted 
     var current_tasks = document.querySelectorAll(".checkbox");
@@ -43,20 +44,27 @@ document.querySelector('#push').onclick = function () {
     newtask = document.querySelector('#newtask input')
     trimmedNewtask = newtask.value.trim()
     console.log(trimmedNewtask);
-    localStorage.setItem('myCat', 'tom');
-
+    modal = document.getElementById("myModal");
+    span = document.getElementsByClassName("close")[0];
+    
     if (trimmedNewtask.length == 0) {
-        alert("Please enter task name")
+        console.log("modalopens")
+        modal.style.display = "block";
+        span.onclick = function () {
+            modal.style.display = "none";
+            console.log('x closes the modal')
+        }
     }
     else {
         document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">
-                    ${trimmedNewtask}
-                </span>
-                <input class="checkbox" type="checkbox"</input>
-            </div>
-        `;
+          <div class="task">
+              <span id="taskname">
+                  ${trimmedNewtask}
+              </span>
+              <input class="checkbox" type="checkbox"</input>
+          </div>
+      `;
+
         // Retrieve serialized items (JSON) from localstorage
         dodo = localStorage.getItem('current_tasks');
         // Parsed (deserialized) JSON which turns it from a string into an array 
@@ -85,7 +93,9 @@ document.querySelector('#push').onclick = function () {
                 localStorage.setItem('current_tasks', serializedtasks)
                 console.log(serializedtasks);
             }
-        }
+        } 
     }
+
+
 }
 
