@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/css.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
 
     <meta charset="UTF-8">
@@ -25,15 +25,16 @@
 <body>
     <!-- WEATHER CARD -->
     <div class="flex justify-center">
-        <div
+        <a href = "weather.html"
             class="card  min-w-sm max-w-sm border border-gray-100 bg-gray-50   transition-shadow test  shadow-lg hover:shadow-shadow-xl w-full bg-green-600 text-purple-50 rounded-md">
             <h2 class="text-md mb-2 px-4 pt-4">
                 <div class="flex justify-between">
                     <div class="badge relative top-0">
-                        <span class="mt-2 py-1 h-12px text-md font-semibold w-12px  rounded right-1 bottom-1 px-4">Salt
+                        <span id="currentSelection"
+                            class="mt-2 py-1 h-12px text-md font-semibold w-12px  rounded right-1 bottom-1 px-4">Salt
                             Lake City</span>
                     </div>
-                    <span class="text-lg font-bold ">6:13</span>
+                    <span id="currentTime" class="text-lg font-bold ">6:13</span>
                 </div>
             </h2>
 
@@ -58,20 +59,21 @@
                                 <path
                                     d="M25 25a5.0057 5.0057 0 01-5-5h2a3 3 0 103-3H2V15H25a5 5 0 010 10zM21 12H6V10H21a3 3 0 10-3-3H16a5 5 0 115 5z">
                                 </path>
-                            </svg> <span>27km/h</span></span><span class="flex space-x-2 items-center"><svg height="20"
-                                width="20" viewBox="0 0 32 32" class="fill-current">
+                            </svg> <span id="currentWind">27km/h</span></span><span
+                            class="flex space-x-2 items-center"><svg height="20" width="20" viewBox="0 0 32 32"
+                                class="fill-current">
                                 <path d="M16,24V22a3.2965,3.2965,0,0,0,3-3h2A5.2668,5.2668,0,0,1,16,24Z"></path>
                                 <path
                                     d="M16,28a9.0114,9.0114,0,0,1-9-9,9.9843,9.9843,0,0,1,1.4941-4.9554L15.1528,3.4367a1.04,1.04,0,0,1,1.6944,0l6.6289,10.5564A10.0633,10.0633,0,0,1,25,19,9.0114,9.0114,0,0,1,16,28ZM16,5.8483l-5.7817,9.2079A7.9771,7.9771,0,0,0,9,19a7,7,0,0,0,14,0,8.0615,8.0615,0,0,0-1.248-3.9953Z">
                                 </path>
-                            </svg> <span>32%</span></span>
+                            </svg> <span id="currentHumidity">32%</span></span>
                     </div>
                     <div>
-                        <h1 class="text-6xl"> 12° </h1>
+                        <h1 id="currentTemp" class="text-6xl"> 12° </h1>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         <!-- STOCKS CARD -->
         <div class="min-w-screen min-h-screen  flex items-center justify-center px-5 py-5">
             <div class="rounded shadow-xl overflow-hidden w-full md:flex" style="max-width:900px"
@@ -79,7 +81,7 @@
                 <div id="position" class="flex w-full md:w-1/2 px-5 pb-4 pt-8 bg-indigo-500 text-white items-center">
                     <canvas id="chart" class="w-full"></canvas>
                 </div>
-                <div class="flex w-full md:w-1/2 p-10 bg-gray-100 text-gray-600 items-center">
+                <a href="finance.html" class="flex w-full md:w-1/2 p-10 bg-gray-100 text-gray-600 items-center">
                     <div class="w-full">
                         <div class="flex w-full items-end mb-6">
                             <span id="symbol" class="block leading-none text-3xl text-gray-800"
@@ -90,13 +92,15 @@
                         <div class="flex w-full text-xs">
                             <div class="flex w-5/12">
                                 <div class="flex-1 pr-3 text-left font-semibold">Open</div>
-                                <div class="flex-1 px-3 text-right" id="mOpen" x-text="stockTicker.price.open.toFixed(3)">Rexx</div>
+                                <div class="flex-1 px-3 text-right" id="mOpen"
+                                    x-text="stockTicker.price.open.toFixed(3)">Rexx</div>
                             </div>
                         </div>
                         <div class="flex w-full text-xs">
                             <div class="flex w-5/12">
                                 <div class="flex-1 pr-3 text-left font-semibold">High</div>
-                                <div id="mHigh" class="px-3 text-right" x-text="stockTicker.price.high.toFixed(3)">0</div>
+                                <div id="mHigh" class="px-3 text-right" x-text="stockTicker.price.high.toFixed(3)">0
+                                </div>
                             </div>
                         </div>
                         <div class="flex w-full text-xs">
@@ -108,17 +112,19 @@
                         <div class="flex w-full text-xs">
                             <div class="flex w-5/12">
                                 <div class="flex-1 pr-3 text-left font-semibold">Closed</div>
-                                <div id="mClose" class="px-3 text-right" x-text="stockTicker.price.closed.toFixed(3)">0</div>
+                                <div id="mClose" class="px-3 text-right" x-text="stockTicker.price.closed.toFixed(3)">0
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
     </div>
 
     </div>
+reddit-bugs
     
   <!-- Reddit Api -->
 <div class="flex justify-center"> 
@@ -138,6 +144,7 @@
   </div>
   <script src="./Assets/Java/Reddit.js"></script>
   <script src="Assets/Java/Finance.js"></script>
+
 </body>
 
 </html>
