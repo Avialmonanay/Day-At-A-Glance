@@ -48,7 +48,6 @@ document.querySelector('#push').onclick = function () {
     if (trimmedNewtask.length == 0) {
         alert("Please enter task name")
     }
-
     else {
         document.querySelector('#tasks').innerHTML += `
             <div class="task">
