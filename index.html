@@ -29,7 +29,7 @@
 
 <body>
     <!-- HEADER -->
-    <div class="grid grid-cols-4 gap-2">
+    <div class=" ">
     <div class="col-span-4">
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -46,19 +46,17 @@
             <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               <span class="material-icons">cottage</span>
             </a>
+            <!-- set this responsive header to our github repo link -->
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               Github Repo
             </a>
-          </div>
-          <div>
-            <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
           </div>
         </div>
       </nav>
     </div>
     
     <!-- WEATHER CARD -->
-    
+    <div class="align grid grid-cols-4 gap-2">
         <div class="odd-card  rounded-lg shadow-xl min-h-300px">
         <a href = "./weather_page/weather.html"
             class="min-w-sm max-w-sm border border-gray-100 bg-gray-50   transition-shadow test  shadow-lg hover:shadow-shadow-xl w-full bg-rose-600 text-purple-50 rounded-md opactiy-60">
@@ -113,7 +111,7 @@
     
         <!-- STOCKS CARD -->
         <div class="flex items-center justify-center">
-            <div class="rounded-lg shadow-xl min-h-300px" >
+            <div class="rounded-lg shadow-xl min-h-400px" >
                 
                 
                 <a href="finance.html" class="flex w-full  bg-gray-100 text-gray-600 items-center">
@@ -156,6 +154,7 @@
         </div>
         <!-- TO-DO LIST CARD -->
  <div class=" wrapper  flex-1">
+    
             <div class="task-input">
               
               <input type="text" placeholder="Add a new task">
@@ -170,14 +169,34 @@
             </div>
             <ul class="task-box"></ul>
           </div>
-    </div>
-    
-    
+          <!-- REDDIT CARD -->
+    <div class="flex justify-center"> 
+  <div id="reddit-container"
+      class="card  min-w-sm max-w-sm border border-gray-100 bg-gray-50   transition-shadow test  shadow-lg hover:shadow-shadow-xl w-full bg-black-600 text-white-50 rounded-md justify-center"; style="text-align: center;">
+      <h2 class="text-md mb-2 px-4 pt-4">
+          <div class="flex justify-between">
+              <div class="badge relative top-0">
+                <div id="subreddit"> </div>
+                    <h1 id="subredditTitle" style="text-align: center;">r/upliftingnews</h1>
+                  <a id ="Title" style="text-align:center; color: black;text-decoration-line:underline ;"></a>
+                  <p>
 
-    <script src="Assets/Java/Finance.js"></script>
+                  </p>
+                  <a href="./Redditpage.html">Change Subreddit?</a>
+                  
+               </div>
+              </div>
+          </div>
+      </h2>
+  </div>
+    </div>
+    </div>
+
+  <script src="./Redditpage.js"></script>
+  <script src="Assets/Java/Finance.js"></script>
+<script src="Assets/Java/Finance.js"></script>
     <script src="Assets/Java/Weather.js"></script>
     <script src="./Assets/Java/toDoList.js"></script>
-    
 </body>
 
 </html>
