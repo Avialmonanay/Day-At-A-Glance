@@ -3,7 +3,7 @@
 User Story
 ```
 As A busy commuter
-I WANT to see a weather forecast, stock market averages, local news headlines and a To-Do list so I can plan my day accordingly 
+I WANT to see a weather forecast, stock prices, local news headlines and a To-Do list so I can plan my day accordingly 
 ```
 Acceptance Criteria
 ```
