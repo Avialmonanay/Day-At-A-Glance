@@ -10,11 +10,33 @@ var staticStockCall = "https://www.alphavantage.co/query?function=TIME_SERIES_DA
 
 
 function getBitcoin() {
-    if(!staticStockCall){}
+  
+  const financeStorage = JSON.parse(localStorage.getItem("financeStorage"))
+
+    if(financeStorage){
+      console.log(financeStorage)
+      fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+financeStorage+"&apikey=JW7LW6L0OT6FJ9OF",{
+        
+        method: "GET",
+        headers:{
+        'Content-Type': 'application/json'
+        }
+    })
+    
+      .then(function (response) {
+        console.log(response);
+        return response.json()
+
+      })
+      .then(function (data) {
+        console.log(data);
+        updateCard(data)
+
+      })
+    }
 
 
-
-    else{}
+    else{
     fetch(staticStockCall,{
         
         method: "GET",
@@ -34,7 +56,7 @@ function getBitcoin() {
 
       })
     }
-
+  }
     function updateCard(data){
       console.log(data)
       var symbolData = data["Meta Data"]
