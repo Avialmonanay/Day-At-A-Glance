@@ -1,4 +1,4 @@
-
+// var subredditTitle = $("subredditTitle)
 $(".newreddit").click(function (event) {
     var element = event.target
     if (element.matches("button")) {
@@ -16,11 +16,13 @@ function openReddit (){
     if (redditLocalStorage) {
      
         var changeReddit= ('https://www.reddit.com/r/'+redditLocalStorage+'.json')
+        $("#subredditTitle").html("r/"+redditLocalStorage)
         fetch (changeReddit)
             .then(result => result.json())
             .then((output) => {
             updateredditcard(output)
-            consolelog (output)
+
+            
     })}
     else{
         fetch('https://www.reddit.com/r/upliftingnews.json')
@@ -33,6 +35,8 @@ function openReddit (){
 openReddit()
 
 
+
+
 function updateredditcard (output){
     console.log (output)
      var url =(output.data.children[0].data.url);
@@ -41,7 +45,3 @@ function updateredditcard (output){
         redditTitle.innerHTML = (title)
         redditTitle.href = (url)
 }
-// function redditdisplay(output){
-//    var newElement = document.createElement("p");
-//    newElement.innerHTML= (output.data.children[0].data.title)
-//    document.getElementById("reddit api").appendChild(newElement)}    
