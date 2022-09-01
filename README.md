@@ -2,8 +2,10 @@
 
 User Story
 ```
-As A busy commuter
-I WANT to see a weather forecast, stock market averages, local news headlines and a To-Do list so I can plan my day accordingly 
+As A busy person
+I HAVE to use multiple apps to view the information that is important to me
+I WANT one app where I can see the weather forecast, stock information, news headlines and a To-Do-List so that I can plan my day accordingly
+
 ```
 Acceptance Criteria
 ```
