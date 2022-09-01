@@ -1,26 +1,73 @@
-var stockCall = "https://api.polygon.io/v2/aggs/ticker/X:BTCUSD/range/1/day/2021-07-22/2021-07-22?adjusted=true&sort=asc&limit=120&apiKey=vXp2SjW4mdwtLBEqL4Mdg_IbyfrSpu2i"
+var openText = $("#mOpen")
+var highText = $("#mHigh")
+var lowText = $("#mLow")
+var closeText = $("#mClose")
+var symbolText = $("#symbol")
+var arrowText = $("#position")
+
+var staticStockCall = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=ADBE&apikey=JW7LW6L0OT6FJ9OF"
 
 
 
-function getBitcoin(requestUrl) {
-    
-    fetch(requestUrl,{
+function getBitcoin() {
+    if(!staticStockCall){}
+
+
+
+    else{}
+    fetch(staticStockCall,{
         
         method: "GET",
-        // mode: "no-cors",
         headers:{
         'Content-Type': 'application/json'
         }
     })
     
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         return response.json()
 
       })
       .then(function (data) {
-        console.log(data);
+        // console.log(data);
+        updateCard(data)
+
       })
     }
 
-getBitcoin(stockCall)
+    function updateCard(data){
+      console.log(data)
+      var symbolData = data["Meta Data"]
+      var symbolVal = Object.values(symbolData)
+      // symbolText.html(symbolVal[1])
+
+
+      var timeSeriesData = data["Time Series (Daily)"]
+      var lastObjInTSD = Object.keys(timeSeriesData)[0];
+      var grabOBJ = Object.values(timeSeriesData[lastObjInTSD])
+      console.log(grabOBJ);
+      var marketOpen = grabOBJ[0]
+      var marketHigh = grabOBJ[1]
+      var marketLow = grabOBJ[2]
+      var marketClose = grabOBJ[3]
+
+      openText.html(marketOpen)
+      highText.html(marketHigh) 
+      lowText.html(marketLow) 
+      closeText.html(marketClose)
+
+
+      if (marketOpen < marketClose){
+        symbolText.html(symbolVal[1]+"⬆️")
+      }
+
+      else {
+        symbolText.html(symbolVal[1]+"⬇️")
+      }
+
+
+    }
+
+
+
+getBitcoin()
