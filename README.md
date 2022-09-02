@@ -25,4 +25,4 @@ THEN I am able to add items or check off items as they are completed
 
 Screen of the completed home page
 
-![](Screenshot%202022-08-18%20194336.jpg)
+![](App-Preview.jpg)
