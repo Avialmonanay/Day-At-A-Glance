@@ -5,9 +5,8 @@ User Story
 
 As A busy person
 I HAVE to use multiple apps to view the information that is important to me
-I WANT one app where I can see the weather forecast, stock information, news headlines and a To-Do-List so that I can plan my day accordingly
+I WANT one app where I can see the weather forecast, stock information, reddit news headlines and a To-Do-List so that I can plan my day accordingly
 
-=======
 
 ```
 Acceptance Criteria
@@ -24,6 +23,6 @@ THEN I am able to add items or check off items as they are completed
 
 
 
-Screen of rough draft
+Screen of the completed home page
 
 ![](Screenshot%202022-08-18%20194336.jpg)
