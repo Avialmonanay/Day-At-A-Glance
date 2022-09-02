@@ -3,7 +3,7 @@
 User Story
 ```
 As A busy commuter
-I WANT to see a weather forecast, stock market averages, local news headlines and a To-Do list so I can plan my day accordingly 
+I WANT to see a weather forecast, stock market averages, my favorite subreddit news headlines and a To-Do list so I can plan my day accordingly 
 ```
 Acceptance Criteria
 ```
@@ -19,6 +19,6 @@ THEN I am able to add items or check off items as they are completed
 
 
 
-Screen of rough draft
+Screen of the completed home page
 
 ![](Screenshot%202022-08-18%20194336.jpg)
