@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fetch Response Status</title>
+    <title>Reddit Headlines</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="./Redditpage.css">
 </head>
 <body>
-<div id="subreddit">
-  <a id ="Title" style="text-align:center; color: black;text-decoration-line:underline ; "></a>
-
-
-  <h1>
-      r/<div class="newreddit"> 
-      <input type="text" id="subredditinput" placeholder="subreddit">
-      <button type="submit" id="subredditinputbutton" placeholder="Change Subreddit">Change Subreddit</button>
-      </div>
-</h1>
-  <!-- <a id ="URL" style="text-align:center;text-decoration-line:underline;"></a> -->
-    
+<div class="container">
+    <div id="subreddit; newtask">
+      
+      
+         <h1 id="subredditTitle" style="text-align: center;">r/upliftingnews</h1> 
+         <div class="newreddit" style="text-align: center; text-size-adjust: 50px;"> 
+            <a id ="Title" style="text-align: center; color: black;text-decoration-line:underline;"></a>
+            <input type="text" id="subredditinput" placeholder="subreddit">
+            <button type="submit" id="subredditinputbutton" placeholder="Change Subreddit" onclick="window.location.reload()">Change Subreddit</button>
+          </div>
+         
+    </div>
 </div>
  <script src="./Redditpage.js"></script>
 </body>
