@@ -79,9 +79,11 @@ transition: transform 150ms;
     transition: transform 150ms;
 }
 
+
 .financeCard{
     background-color: lightgray;
     width: 200px;
     margin-left: 20px;
     margin-top: 40px;
 }
+

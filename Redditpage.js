@@ -1,9 +1,10 @@
-// var subredditTitle = $("subredditTitle)
+
 $(".newreddit").click(function (event) {
     var element = event.target
     if (element.matches("button")) {
         var userInput = $(this).children("input").val()
         localStorage.setItem("redditStorage", JSON.stringify(userInput))
+       
     }
 })
 
@@ -21,6 +22,8 @@ function openReddit (){
             .then(result => result.json())
             .then((output) => {
             updateredditcard(output)
+            
+            
 
             
     })}
@@ -30,6 +33,7 @@ function openReddit (){
             .then((output) => {
                 console.log(output)
             updateredditcard(output)
+            
     })
 }}
 openReddit()
