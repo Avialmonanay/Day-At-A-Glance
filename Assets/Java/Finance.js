@@ -1,3 +1,4 @@
+// local variables
 var openText = $("#mOpen")
 var highText = $("#mHigh")
 var lowText = $("#mLow")
@@ -5,6 +6,8 @@ var closeText = $("#mClose")
 var symbolText = $("#symbol")
 var arrowText = $("#position")
 
+
+//API Call that runs when no user input is detected
 var staticStockCall = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=ADBE&apikey=JW7LW6L0OT6FJ9OF"
 
 
@@ -13,6 +16,7 @@ function getBitcoin() {
   
   const financeStorage = JSON.parse(localStorage.getItem("financeStorage"))
 
+  //if user input does exist user their custom search
     if(financeStorage){
       console.log(financeStorage)
       fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+financeStorage+"&apikey=JW7LW6L0OT6FJ9OF",{
@@ -35,7 +39,7 @@ function getBitcoin() {
       })
     }
 
-
+    //if user input does not exist display static call
     else{
     fetch(staticStockCall,{
         
@@ -57,12 +61,12 @@ function getBitcoin() {
       })
     }
   }
+
+  //updates the card with the data from the API call.
     function updateCard(data){
       console.log(data)
       var symbolData = data["Meta Data"]
       var symbolVal = Object.values(symbolData)
-      // symbolText.html(symbolVal[1])
-
 
       var timeSeriesData = data["Time Series (Daily)"]
       var lastObjInTSD = Object.keys(timeSeriesData)[0];

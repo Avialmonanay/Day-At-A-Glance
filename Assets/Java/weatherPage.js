@@ -3,6 +3,8 @@ var listEl = $("#history")
 var fiveDayContainer = $("#fiveDay")
 
 
+
+
 $(".search").click(function (event) {
     var element = event.target
     if (element.matches("button")) {
@@ -12,10 +14,13 @@ $(".search").click(function (event) {
         if (!userInput) {
             return
         }
+
+        //sets user input as current item and stores in local storage
         localStorage.setItem("currentCity", userInput)
 
         const cityNameStorage = JSON.parse(localStorage.getItem("cityNameLS"))
 
+        
         if (!cityNameStorage) {
             cityNameLS.push(userInput)
 
@@ -23,6 +28,7 @@ $(".search").click(function (event) {
         
         }
 
+        
         else {
 
             cityNameStorage.push(userInput)
@@ -40,6 +46,7 @@ $(".search").click(function (event) {
 function currentWeather() {
     const currentCityLS = localStorage.getItem("currentCity")
 
+    //if a city exits in local storage pull that city first
     if (currentCityLS) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + currentCityLS + "&units=imperial&appid=c64d9c95aa9e442bc0444f33c92c8506", {
 
@@ -79,10 +86,12 @@ function logHistory() {
 
     const cityHistory = JSON.parse(localStorage.getItem("cityNameLS"));
 
-
+    //if no citys exists in local storage STOP
     if (!cityHistory) {
         return
     }
+
+    //if citys do exist creates the items to be displayed.
 
     else {
 
@@ -119,7 +128,7 @@ $("#history").click(function (event) {
 }
 )
 
-
+//pulls the 5 day forcast
 function fiveDayWeather() {
     const currentCityLS = localStorage.getItem("currentCity")
     if (currentCityLS) {
@@ -136,6 +145,7 @@ function fiveDayWeather() {
 }
 
 
+//pulls 1 data set for each day and creates a card to display the data.
 function setFiveDayWeather(data) {
     fiveDayContainer.empty()
 
